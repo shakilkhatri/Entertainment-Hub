@@ -1,0 +1,7 @@
+.Footer {
+  position: sticky;
+  bottom: 0;
+  width: "100%";
+  border: "5px black";
+  z-index: 100;
+}
