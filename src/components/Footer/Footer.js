@@ -31,17 +31,17 @@ export default function Footer() {
           }}
         >
           <BottomNavigationAction
-            style={{ color: "white" }}
+            style={{ color: value === 0 ? "white" : "lightgray" }}
             label="Trending"
             icon={<TrendingUpIcon />}
           />
           <BottomNavigationAction
-            style={{ color: "white" }}
+            style={{ color: value === 1 ? "white" : "lightgray" }}
             label="Movies"
             icon={<MovieIcon />}
           />
           <BottomNavigationAction
-            style={{ color: "white" }}
+            style={{ color: value === 2 ? "white" : "lightgray" }}
             label="Series"
             icon={<LiveTvIcon />}
           />
