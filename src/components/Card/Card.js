@@ -18,7 +18,7 @@ export default function MovieCard({
 }) {
   return (
     <Badge
-      badgeContent={vote_average}
+      badgeContent={vote_average.toFixed(2)}
       color={vote_average > 6 ? "primary" : "secondary"}
     >
       <Card

@@ -31,18 +31,21 @@ export default function Footer() {
           }}
         >
           <BottomNavigationAction
-            style={{ color: value === 0 ? "white" : "lightgray" }}
+            style={{ color: value === 0 ? "yellowgreen" : "lightgray" }}
             label="Trending"
+            className="Trending"
             icon={<TrendingUpIcon />}
           />
           <BottomNavigationAction
-            style={{ color: value === 1 ? "white" : "lightgray" }}
+            style={{ color: value === 1 ? "yellowgreen" : "lightgray" }}
             label="Movies"
+            className="Movies"
             icon={<MovieIcon />}
           />
           <BottomNavigationAction
-            style={{ color: value === 2 ? "white" : "lightgray" }}
+            style={{ color: value === 2 ? "yellowgreen" : "lightgray" }}
             label="Series"
+            className="Series"
             icon={<LiveTvIcon />}
           />
         </BottomNavigation>

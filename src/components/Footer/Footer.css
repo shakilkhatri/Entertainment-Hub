@@ -5,3 +5,9 @@
   border: "5px black";
   z-index: 100;
 }
+
+.Trending:hover,
+.Movies:hover,
+.Series:hover {
+  bottom: 5px;
+}
