@@ -19,5 +19,12 @@
 @media (max-width: 600px) {
   .header {
     font-size: 25px;
+    height: 50px;
+  }
+}
+@media (max-width: 400px) {
+  .header {
+    height: 50px;
+    min-width: 380px;
   }
 }

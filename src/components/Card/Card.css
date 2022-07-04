@@ -1,6 +1,5 @@
-.image {
-  zoom: 0.7;
-}
+/* .image {
+  /* zoom: 0.7;} */
 
 .Card {
   box-shadow: 3px 2px 20px black;
@@ -20,3 +19,11 @@
     max-width: 500px;
   }
 } */
+
+@media (max-width: 400px) {
+  .Card {
+    max-width: 150px;
+    width: 300px;
+    font-size: small;
+  }
+}

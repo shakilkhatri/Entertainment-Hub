@@ -1,4 +1,6 @@
 import * as React from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
@@ -16,6 +18,20 @@ export default function MovieCard({
   vote_average,
   overview,
 }) {
+  const fetchTrailer = async () => {
+    const { data } = await axios.get(
+      `https://api.themoviedb.org/3/${media_type}/${id}/videos?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`
+    );
+
+    // setContent(data.results);
+    let videoKey = data.results[0].key;
+    // console.log(videoKey);
+    window.open(`https://www.youtube.com/watch?v=${videoKey}`, "_blank");
+  };
+  useEffect(() => {
+    // fetchTrailer();
+  }, []);
+
   return (
     <Badge
       badgeContent={vote_average.toFixed(2)}
@@ -32,6 +48,7 @@ export default function MovieCard({
             image={poster ? `${img_300}${poster}` : unavailable}
             alt={title}
             className="image"
+            onClick={fetchTrailer}
           />
           <CardContent>
             <Typography gutterBottom variant="subtitle2" component="div">
