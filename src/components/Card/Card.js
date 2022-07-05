@@ -23,9 +23,8 @@ export default function MovieCard({
       `https://api.themoviedb.org/3/${media_type}/${id}/videos?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`
     );
 
-    // setContent(data.results);
+    // console.log(data.results);
     let videoKey = data.results[0].key;
-    // console.log(videoKey);
     window.open(`https://www.youtube.com/watch?v=${videoKey}`, "_blank");
   };
   useEffect(() => {
@@ -38,7 +37,7 @@ export default function MovieCard({
       color={vote_average > 6 ? "primary" : "secondary"}
     >
       <Card
-        sx={{ boxShadow: "3px 3px 5px black", transition: "transform 0.25s" }}
+        sx={{ boxShadow: "0px 0px 10px black", transition: "transform 0.25s" }}
         className="Card"
       >
         <CardActionArea>
@@ -50,7 +49,7 @@ export default function MovieCard({
             className="image"
             onClick={fetchTrailer}
           />
-          <CardContent>
+          <CardContent className="title" style={{ padding: "5px" }}>
             <Typography gutterBottom variant="subtitle2" component="div">
               {title}
             </Typography>

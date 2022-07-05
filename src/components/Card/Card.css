@@ -2,15 +2,20 @@
   /* zoom: 0.7;} */
 
 .Card {
-  box-shadow: 3px 2px 20px black;
-  transition: transform 0.5s;
-  padding-right: 5px;
-  max-width: 200px;
+  /* box-shadow: 15px 15px 10px black; */
+  transition: transform 0.2s;
+  /* padding-right: 5px; */
+  width: 200px;
+  /* height: 350px; */
   margin-bottom: 2em;
 }
 
 .Card:hover {
   transform: scale(1.05);
+}
+
+.title {
+  padding: 5px;
 }
 
 /* @media (max-width: 500px) {
